@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="product"
+            type="com.rui.paulo.calei.databindingobjectapp.models.Product" />
+    </data>
+
+       <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="100dp"
+           android:elevation="8dp"
+           app:cardElevation="8dp"
+           >
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_margin="15dp"
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/name"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textSize="20sp"
+                   android:text="@{product.name}"
+                   android:textColor="@android:color/black"
+                   />
+
+               <TextView
+                   android:id="@+id/price"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textSize="20sp"
+                   android:text="@{product.price}"
+                   android:layout_marginTop="20dp"
+                   android:textColor="@android:color/black"
+                   />
+           </LinearLayout>
+       </androidx.cardview.widget.CardView>
+</layout>
